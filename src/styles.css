@@ -1,25 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
-
-/* Reset y estilos globales */
+/* Reset y estilos globales de Brayan Mosos Portfolio 2026 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #22262d;
-  color: #ffffff;
-  line-height: 1.6;
-  overflow-x: hidden;
+:root {
+  --bg-primary: #070a13;
+  --bg-secondary: #0d1222;
+  --bg-card: rgba(15, 22, 42, 0.65);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent-primary: #00f2fe;
+  --accent-secondary: #8a2be2;
+  --accent-blue: #4facfe;
+  --glass-bg: rgba(10, 16, 30, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --font-title: 'Space Grotesk', sans-serif;
+  --font-body: 'Outfit', sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-primary) var(--bg-primary);
 }
 
-/* Para agregar espacio debajo del navbar fijo */
 body {
-  padding-top: 80px;
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  padding-top: 80px; /* Espacio para el navbar fijo */
+}
+
+/* Webkit Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--accent-primary), var(--accent-secondary));
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-blue);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }

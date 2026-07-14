@@ -1,14 +1,16 @@
-<!-- Portafolio Personal -->
+<!-- Portafolio Personal Premium 2026 -->
 
-<!-- Navbar -->
+<!-- Navbar con Glassmorphism -->
 <nav class="navbar">
   <div class="nav-container">
     <div class="logo">
-      <h1>|Bryan Mosos</h1>
+      <a href="#inicio" class="logo-link">
+        <span class="logo-accent">&lt;</span>BrayanMosos<span class="logo-accent">/&gt;</span>
+      </a>
     </div>
     
     <!-- Botón Hamburguesa -->
-    <button class="hamburger" (click)="toggleMenu()" [class.active]="menuOpen()">
+    <button class="hamburger" (click)="toggleMenu()" [class.active]="menuOpen()" aria-label="Abrir menú">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
@@ -18,28 +20,31 @@
     <ul class="nav-menu" [class.active]="menuOpen()">
       <li><a href="#inicio" class="nav-link" (click)="closeMenu()">Inicio</a></li>
       <li><a href="#sobre-mi" class="nav-link" (click)="closeMenu()">Sobre Mí</a></li>
+      <li><a href="#experiencia" class="nav-link" (click)="closeMenu()">Experiencia</a></li>
       <li><a href="#proyectos" class="nav-link" (click)="closeMenu()">Proyectos</a></li>
-
       <li><a href="#contacto" class="nav-link" (click)="closeMenu()">Contacto</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- Sección Hero -->
+<!-- Sección Hero con Efecto de Luces de Neón -->
 <section id="inicio" class="hero">
+  <div class="hero-glow-1"></div>
+  <div class="hero-glow-2"></div>
   <div class="hero-container">
     <div class="hero-content">
-      <div class="hero-text">
+      <div class="hero-text reveal reveal-left">
+        <div class="badge-2026">PRO PORTFOLIO 2026</div>
         <h2 class="hero-greeting">¡Hola! Soy</h2>
-        <h1 class="hero-name">Bryan Mosos</h1>
-        <p class="hero-title">Desarrollador y Analista</p>
+        <h1 class="hero-name">Brayan Mosos</h1>
+        <p class="hero-title-dynamic">Desarrollador de Software & Analista</p>
         <p class="hero-description">
-          Apasionado por crear experiencias appas y soluciones innovadoras
-          para ayudar a las empresas a crecer en el mundo digital.
+          Tecnólogo en Análisis y Desarrollo de Software con enfoque en automatización, 
+          inteligencia artificial aplicada y creación de aplicaciones móviles con Flutter y web con Angular.
         </p>
         <div class="hero-buttons">
-          <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
-          <a href="#contacto" class="btn btn-secondary">Contáctame</a>
+          <a href="#proyectos" class="btn btn-primary"><i class="fas fa-project-diagram"></i> Ver Proyectos</a>
+          <a href="#contacto" class="btn btn-secondary"><i class="fas fa-paper-plane"></i> Hablemos</a>
         </div>
         <div class="hero-social">
           <a href="https://github.com/BrayanMR" class="social-link" target="_blank" aria-label="GitHub">
@@ -48,98 +53,136 @@
           <a href="https://www.linkedin.com/in/brayan-mosos-rodriguez-984358345" class="social-link" target="_blank" aria-label="LinkedIn">
             <i class="fab fa-linkedin"></i>
           </a>
-          <a href="https://www.threads.com/@brayan_mr07" class="social-link" target="_blank" aria-label="Threads">
-            <i class="fas fa-at"></i>
+          <a href="https://www.threads.net/@brayan_mr07" class="social-link" target="_blank" aria-label="Threads">
+            <i class="fab fa-threads"></i>
           </a>
         </div>
       </div>
-      <div class="hero-image">
+      <div class="hero-image reveal reveal-right">
         <div class="image-wrapper">
-          <img src="assets/images/IMAGEN.png" alt="Bryan Mosos - Desarrollador Full Stack">
-          <div class="image-overlay"></div>
+          <img src="assets/images/IMAGEN.png" alt="Brayan Mosos - Desarrollador">
+          <div class="image-glow"></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Sección Sobre Mí -->
+<!-- Sección Sobre Mí y Habilidades -->
 <section id="sobre-mi" class="about">
   <div class="about-container">
-    <div class="section-header">
+    <div class="section-header reveal">
       <h2 class="section-title">Sobre Mí</h2>
       <div class="title-underline"></div>
     </div>
     
     <div class="about-content">
-      <div class="about-text">
-      
+      <div class="about-text reveal reveal-left">
+        <h3 class="about-subtitle">Mi Enfoque Profesional</h3>
         <p class="about-description">
-Soy desarrollador de software en formación, con conocimientos básicos en programación, 
-desarrollo web y móvil. 
+          Soy un tecnólogo en formación apasionado por la innovación y la transformación digital. Mi objetivo es diseñar 
+          soluciones eficientes aplicando desarrollo web/móvil, administración segura de bases de datos y herramientas de 
+          inteligencia artificial para optimizar procesos.
+        </p>
+        <p class="about-description">
+          Me caracterizo por ser una persona autodidacta, responsable y orientada a resultados. Disfruto enfrentar 
+          nuevos retos tecnológicos y trabajar en equipo en proyectos de gran impacto social.
         </p>
         
-        <p class="about-description">
-          Aunque aún no lo sé todo, me gusta aprender cada día y mejorar mis 
-habilidades.He participado en proyectos personales y académicos que me han ayudado a 
-entender cómo crear aplicaciones y resolver problemas con tecnología.
-        </p>
-        
-        <p class="about-description">
-    Soy una persona responsable, autodidacta y apasionada por aprender, con muchas ganas de 
-seguir creciendo en el mundo del desarrollo y aportar a los proyectos donde pueda participa 
-        </p>
-        
-        <div class="about-stats">
-          <div class="stat-item">
-            <h3 class="stat-number">2+</h3>
-            <p class="stat-label">Proyectos Completados</p>
+        <!-- Tarjeta de información personal segura -->
+        <div class="personal-info-card">
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="info-label">Edad:</span>
+              <span class="info-value">21 años</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Ubicación:</span>
+              <span class="info-value">Mosquera, Colombia</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Identificación:</span>
+              @if (showSensitiveInfo()) {
+                <span class="info-value secure">1034.777.989 <button class="btn-secure-toggle" (click)="toggleSensitiveInfo()"><i class="fas fa-eye-slash"></i> Ocultar</button></span>
+              } @else {
+                <span class="info-value secure">********* <button class="btn-secure-toggle" (click)="toggleSensitiveInfo()"><i class="fas fa-eye"></i> Revelar</button></span>
+              }
+            </div>
           </div>
-          <div class="stat-item">
-            <h3 class="stat-number">4+</h3>
-            <p class="stat-label">Años de conocimientos</p>
-          </div>
-          <div class="stat-item">
-            <h3 class="stat-number">3+</h3>
-            <p class="stat-label">Tecnologías Dominadas</p>
+        </div>
+
+        <!-- Formación Académica como Tarjetas Elegantes -->
+        <div class="academic-section">
+          <h4 class="academic-title"><i class="fas fa-graduation-cap"></i> Formación Académica</h4>
+          <div class="academic-timeline">
+            <div class="academic-card">
+              <div class="academic-badge">En Curso</div>
+              <h5>Tecnólogo en Análisis y Programación de Software</h5>
+              <p class="academic-meta">SENA (Servicio Nacional de Aprendizaje)</p>
+              <p class="academic-desc">Penúltimo trimestre de formación aplicada.</p>
+            </div>
+            
+            <div class="academic-card">
+              <div class="academic-badge">Finaliza 07/2026</div>
+              <h5>Curso Especializado de Bases de Datos SQL & NoSQL</h5>
+              <p class="academic-meta">Educación Continua</p>
+              <p class="academic-desc">Diseño, administración y seguridad en bases de datos relacionales y no relacionales.</p>
+            </div>
+
+            <div class="academic-card">
+              <div class="academic-badge finished">Completado</div>
+              <h5>Técnico Profesional en Desarrollo de Software</h5>
+              <p class="academic-meta">Institución Técnica - Graduado 2022</p>
+            </div>
           </div>
         </div>
       </div>
       
-      <div class="about-skills">
-        <h3 class="skills-title">Lo que hago</h3>
+      <!-- Habilidades e Iconos Dinámicos -->
+      <div class="about-skills reveal reveal-right">
+        <h3 class="skills-title">Habilidades Técnicas</h3>
         
-        <div class="skill-cards">
-          <div class="skill-card">
-            <div class="skill-icon">
-              <i class="fas fa-code"></i>
+        <div class="skills-showcase">
+          <div class="skill-category-card">
+            <h4><i class="fas fa-laptop-code"></i> Desarrollo de Software</h4>
+            <div class="skills-bar-group">
+              <div class="skill-progress">
+                <div class="skill-info-text"><span>Flutter / Dart (Móvil)</span><span>85%</span></div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill fill-flutter"></div></div>
+              </div>
+              <div class="skill-progress">
+                <div class="skill-info-text"><span>Angular / TypeScript (Web)</span><span>80%</span></div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill fill-angular"></div></div>
+              </div>
+              <div class="skill-progress">
+                <div class="skill-info-text"><span>HTML5, CSS3, JavaScript</span><span>90%</span></div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill fill-web"></div></div>
+              </div>
             </div>
-            <h4>Desarrollo Frontend</h4>
-            <p>Creación de interfaces modernas y responsivas con Angular, React y Vue.js</p>
           </div>
-          
-          <div class="skill-card">
-            <div class="skill-icon">
-              <i class="fas fa-server"></i>
+
+          <div class="skill-category-card">
+            <h4><i class="fas fa-database"></i> Bases de Datos & Backend</h4>
+            <div class="skills-bar-group">
+              <div class="skill-progress">
+                <div class="skill-info-text"><span>MySQL</span><span>75%</span></div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill fill-mysql"></div></div>
+              </div>
+              <div class="skill-progress">
+                <div class="skill-info-text"><span>Firebase (Firestore / Auth)</span><span>80%</span></div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill fill-firebase"></div></div>
+              </div>
             </div>
-            <h4>Desarrollo Backend</h4>
-            <p>APIs RESTful y aplicaciones del lado del servidor con Node.js</p>
           </div>
-          
-          <div class="skill-card">
-            <div class="skill-icon">
-              <i class="fas fa-database"></i>
+
+          <div class="skill-category-card">
+            <h4><i class="fas fa-tools"></i> Soporte & Otros</h4>
+            <div class="skills-grid-badges">
+              <span class="badge-skill"><i class="fas fa-wrench"></i> Mantenimiento Preventivo</span>
+              <span class="badge-skill"><i class="fas fa-shield-alt"></i> Seguridad Informática</span>
+              <span class="badge-skill"><i class="fas fa-robot"></i> Inteligencia Artificial Aplicada</span>
+              <span class="badge-skill"><i class="fas fa-users-cog"></i> Atención & Soporte</span>
             </div>
-            <h4>Base de Datos</h4>
-            <p>Diseño y gestión de bases de datos SQL y NoSQL para aplicaciones escalables, mas Firebase</p>
-          </div>
-          
-          <div class="skill-card">
-            <div class="skill-icon">
-              <i class="fas fa-mobile-alt"></i>
-            </div>
-            <h4>aplicaciones moviles</h4>
-            <p> desaroollar tecnologia  con diseños adactabke y automatizacion con flutter y dart</p>
           </div>
         </div>
       </div>
@@ -147,18 +190,85 @@ seguir creciendo en el mundo del desarrollo y aportar a los proyectos donde pued
   </div>
 </section>
 
-<!-- Sección Proyectos -->
+<!-- Sección Experiencia Laboral en Línea de Tiempo -->
+<section id="experiencia" class="experience">
+  <div class="experience-glow"></div>
+  <div class="experience-container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Experiencia Destacada</h2>
+      <div class="title-underline"></div>
+      <p class="section-subtitle">Proyectos profesionales y roles de desarrollo</p>
+    </div>
+
+    <div class="timeline">
+      <!-- Experiencia 1: AURA -->
+      <div class="timeline-item reveal reveal-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Febrero 2026 - Julio 2026</div>
+        <div class="timeline-content">
+          <div class="timeline-project-badge"><i class="fas fa-star"></i> Proyecto Destacado</div>
+          <h3>Creador & Desarrollador Principal</h3>
+          <h4 class="timeline-company">AURA - Plataforma Tecnológica de Apoyo</h4>
+          <p class="timeline-desc">
+            Diseñé y desarrollé la plataforma final Sena orientada al acompañamiento y apoyo digital 
+            para mujeres en situación de vulnerabilidad, garantizando accesibilidad y confidencialidad.
+          </p>
+          <ul class="timeline-tasks">
+            <li><i class="fas fa-check-circle"></i> Desarrollo full-stack de la aplicación web y móvil.</li>
+            <li><i class="fas fa-check-circle"></i> Diseño e implementación de base de datos seguras con Firebase.</li>
+            <li><i class="fas fa-check-circle"></i> Integración de módulos de autenticación y gestión segura de cuentas.</li>
+            <li><i class="fas fa-check-circle"></i> Diseño de interfaces intuitivas y adaptables (Mobile-First).</li>
+          </ul>
+          <div class="timeline-tags">
+            <span class="tag">Angular</span>
+            <span class="tag">Flutter</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">Security</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experiencia 2: MCI MOSQUERA -->
+      <div class="timeline-item reveal reveal-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Junio 2025 - Enero 2026</div>
+        <div class="timeline-content">
+          <h3>Desarrollador de Software</h3>
+          <h4 class="timeline-company">MCI MOSQUERA</h4>
+          <p class="timeline-desc">
+            Participé activamente en el diseño y despliegue del sistema digital de registro, mejorando la 
+            eficiencia operativa en el control académico.
+          </p>
+          <ul class="timeline-tasks">
+            <li><i class="fas fa-check-circle"></i> Desarrollo de la aplicación móvil en Flutter para asistencia.</li>
+            <li><i class="fas fa-check-circle"></i> Estructuración de bases de datos para almacenamiento robusto de registros.</li>
+            <li><i class="fas fa-check-circle"></i> Generación de reportes automáticos y herramientas de análisis.</li>
+            <li><i class="fas fa-check-circle"></i> Optimización general de procesos escolares e institucionales.</li>
+          </ul>
+          <div class="timeline-tags">
+            <span class="tag">Flutter</span>
+            <span class="tag">Dart</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Data Analysis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Proyectos Destacados -->
 <section id="proyectos" class="projects">
   <div class="projects-container">
-    <div class="section-header">
+    <div class="section-header reveal">
       <h2 class="section-title">Mis Proyectos</h2>
       <div class="title-underline"></div>
-      <p class="section-subtitle">Algunos de mis trabajos más recientes</p>
+      <p class="section-subtitle">Exhibición de desarrollos interactivos y código abierto</p>
     </div>
     
     <div class="projects-grid">
-      <!-- Proyecto Flutter -->
-      <div class="project-card">
+      <!-- Proyecto 1: Flutter Rock App -->
+      <div class="project-card reveal">
         <div class="project-image">
           <img src="assets/images/flutter/1.jpeg" alt="Rock - App Flutter">
           <div class="project-overlay">
@@ -176,24 +286,24 @@ seguir creciendo en el mundo del desarrollo y aportar a los proyectos donde pued
           <div class="project-category">
             <i class="fab fa-flutter"></i> App Móvil
           </div>
-          <h3 class="project-title">Rock</h3>
+          <h3 class="project-title">Rock App</h3>
           <p class="project-description">
-            Aplicación móvil desarrollada con Flutter. Esta app cuenta con múltiples 
-            pantallas y funcionalidades modernas para una experiencia de usuario fluida.
-            <br><br>
-            <strong>📱 Click en 🖼️ para ver galería completa (10+ capturas)</strong>
+            Aplicación móvil moderna desarrollada con Flutter. Ofrece una interfaz de usuario fluida, 
+            arquitectura limpia y múltiples vistas funcionales.
           </p>
+          <div class="project-info-action">
+            <span>📱 Click en 🖼️ para ver screenshots (10+ capturas)</span>
+          </div>
           <div class="project-tags">
             <span class="tag">Flutter</span>
             <span class="tag">Dart</span>
-            <span class="tag">Mobile</span>
-            <span class="tag">UI/UX</span>
+            <span class="tag">Mobile UI</span>
           </div>
         </div>
       </div>
       
-      <!-- Proyecto Ecosystem -->
-      <div class="project-card">
+      <!-- Proyecto 2: Ecosystem Web -->
+      <div class="project-card reveal">
         <div class="project-image">
           <img src="assets/images/logo ecosistem.png" alt="Ecosystem - Sistema de Gestión">
           <div class="project-overlay">
@@ -213,171 +323,177 @@ seguir creciendo en el mundo del desarrollo y aportar a los proyectos donde pued
           </div>
           <h3 class="project-title">Ecosystem</h3>
           <p class="project-description">
-            Sistema web desarrollado con Angular que implementa autenticación y gestión de usuarios.
-            Aplicación moderna con routing y arquitectura escalable.
-            <br><br>
-            <strong>Credenciales de prueba:</strong><br>
-            📧 Email: admin123@gmail.com<br>
-            🔑 Contraseña: admin123
+            Sistema de gestión y administración de usuarios web desarrollado en Angular. 
+            Implementa ruteo avanzado, componentes interactivos y control de accesos.
           </p>
+          <div class="project-credentials">
+            <strong>Credenciales Demo:</strong><br>
+            <span>📧 admin123@gmail.com</span> | <span>🔑 admin123</span>
+          </div>
           <div class="project-tags">
             <span class="tag">Angular</span>
             <span class="tag">TypeScript</span>
-            <span class="tag">GitHub Pages</span>
-            <span class="tag">Routing</span>
+            <span class="tag">SPA</span>
           </div>
         </div>
       </div>
       
-      <!-- Tarjeta para más proyectos -->
-      <div class="project-card more-projects">
+      <!-- Tarjeta Más Proyectos de GitHub -->
+      <div class="project-card more-projects reveal">
         <div class="more-content">
-          <i class="fas fa-plus-circle"></i>
-          <h3>Más Proyectos</h3>
-          <p>¿Quieres ver más de mi trabajo?</p>
-          <a href="https://github.com/BrayanMR" class="btn-more" target="_blank">Ver en GitHub</a>
+          <div class="github-icon-glow">
+            <i class="fab fa-github"></i>
+          </div>
+          <h3>Explorar Más Código</h3>
+          <p>Visita mi perfil de GitHub para revisar mis repositorios adicionales y contribuciones.</p>
+          <a href="https://github.com/BrayanMR" class="btn btn-github" target="_blank">
+            <i class="fab fa-github"></i> github.com/BrayanMR
+          </a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Modal Galería Rock App -->
+<!-- Modal Galería Rock App con Glassmorphism -->
 <div class="gallery-modal" [class.active]="galleryOpen()" (click)="closeGallery()">
   <div class="gallery-modal-content" (click)="$event.stopPropagation()">
-    <button class="gallery-close" (click)="closeGallery()">
+    <button class="gallery-close" (click)="closeGallery()" aria-label="Cerrar galería">
       <i class="fas fa-times"></i>
     </button>
     
     <div class="gallery-modal-header">
-      <h2>Rock - Galería de Screenshots</h2>
-      <p>Aplicación móvil desarrollada con Flutter</p>
+      <h2>Rock App - Galería Completa</h2>
+      <p>Explora las capturas de pantalla de la aplicación en Flutter</p>
     </div>
     
     <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="assets/images/flutter/1.jpeg" alt="Rock Screenshot 1">
-      </div>
-      <div class="gallery-item">
-        <img src="assets/images/flutter/2.jpeg" alt="Rock Screenshot 2">
-      </div>
-      <div class="gallery-item">
-        <img src="assets/images/flutter/3.jpeg" alt="Rock Screenshot 3">
-      </div>
-      <div class="gallery-item">
-        <img src="assets/images/flutter/4.jpeg" alt="Rock Screenshot 4">
-      </div>
-      <div class="gallery-item">
-        <img src="assets/images/flutter/5.jpeg" alt="Rock Screenshot 5">
-      </div>
-      <div class="gallery-item">
-        <img src="assets/images/flutter/6.jpeg" alt="Rock Screenshot 6">
-      </div>
-      <div class="gallery-item">
-        <img src="assets/images/flutter/7.jpeg" alt="Rock Screenshot 7">
-      </div>
-      <div class="gallery-item">
-        <img src="assets/images/flutter/8.jpeg" alt="Rock Screenshot 8">
-      </div>
-      <div class="gallery-item">
-        <img src="assets/images/flutter/9.jpeg" alt="Rock Screenshot 9">
-      </div>
-      <div class="gallery-item">
-        <img src="assets/images/flutter/10.jpeg" alt="Rock Screenshot 10">
-      </div>
+      <div class="gallery-item"><img src="assets/images/flutter/1.jpeg" alt="Rock Screenshot 1"></div>
+      <div class="gallery-item"><img src="assets/images/flutter/2.jpeg" alt="Rock Screenshot 2"></div>
+      <div class="gallery-item"><img src="assets/images/flutter/3.jpeg" alt="Rock Screenshot 3"></div>
+      <div class="gallery-item"><img src="assets/images/flutter/4.jpeg" alt="Rock Screenshot 4"></div>
+      <div class="gallery-item"><img src="assets/images/flutter/5.jpeg" alt="Rock Screenshot 5"></div>
+      <div class="gallery-item"><img src="assets/images/flutter/6.jpeg" alt="Rock Screenshot 6"></div>
+      <div class="gallery-item"><img src="assets/images/flutter/7.jpeg" alt="Rock Screenshot 7"></div>
+      <div class="gallery-item"><img src="assets/images/flutter/8.jpeg" alt="Rock Screenshot 8"></div>
+      <div class="gallery-item"><img src="assets/images/flutter/9.jpeg" alt="Rock Screenshot 9"></div>
+      <div class="gallery-item"><img src="assets/images/flutter/10.jpeg" alt="Rock Screenshot 10"></div>
     </div>
   </div>
 </div>
 
-<!-- Sección Contacto -->
+<!-- Sección Contacto Premium -->
 <section id="contacto" class="contact">
+  <div class="contact-glow-left"></div>
+  <div class="contact-glow-right"></div>
   <div class="contact-container">
-    <div class="section-header">
+    <div class="section-header reveal">
       <h2 class="section-title">Contáctame</h2>
       <div class="title-underline"></div>
-      <p class="section-subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+      <p class="section-subtitle">¿Tienes alguna idea o proyecto en mente? ¡Construyámoslo juntos!</p>
     </div>
     
-    <div class="contact-content-center">
-      <!-- Información de Contacto -->
-      <div class="contact-info">
-        <h3 class="contact-info-title">Información de Contacto</h3>
-        <p class="contact-info-text">
-          Estoy disponible para trabajar en proyectos freelance o empleos a tiempo completo. 
-          No dudes en contactarme a través de cualquiera de estos medios.
+    <div class="contact-wrapper">
+      <!-- Tarjetas de Información Rápida (Izquierda) -->
+      <div class="contact-info reveal reveal-left">
+        <h3 class="contact-card-title">Información de Contacto</h3>
+        <p class="contact-card-text">
+          Estoy disponible para unirme a equipos tecnológicos, proyectos de desarrollo de software freelance o 
+          diseño de soluciones a medida. Escríbeme y responderé lo antes posible.
         </p>
         
-        <div class="contact-items">
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="contact-details">
-              <h4>Email</h4>
-              <a href="mailto:tuEmail@ejemplo.com">BRYN9105@GMAIL.COM</a>
+        <div class="contact-list">
+          <div class="contact-info-item">
+            <div class="contact-icon-bg"><i class="fas fa-envelope"></i></div>
+            <div class="contact-text-details">
+              <span>Email</span>
+              <a href="mailto:bryn9105@gmail.com">bryn9105&#64;gmail.com</a>
             </div>
           </div>
           
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-phone"></i>
-            </div>
-            <div class="contact-details">
-              <h4>Teléfono</h4>
-              <a href="tel:+573007295264">+57 300 7295264</a>
+          <div class="contact-info-item">
+            <div class="contact-icon-bg"><i class="fas fa-phone-alt"></i></div>
+            <div class="contact-text-details">
+              <span>Teléfono / WhatsApp</span>
+              <a href="https://wa.me/573007295264" target="_blank">+57 300 729 5264</a>
             </div>
           </div>
           
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <div class="contact-details">
-              <h4>Ubicación</h4>
-              <p>Tu Ciudad, Tu País</p>
+          <div class="contact-info-item">
+            <div class="contact-icon-bg"><i class="fas fa-map-marked-alt"></i></div>
+            <div class="contact-text-details">
+              <span>Ubicación</span>
+              <p>Mosquera, Cundinamarca, Colombia</p>
             </div>
           </div>
         </div>
-        
-        <div class="contact-social">
-          <h4>Sígueme en</h4>
-          <div class="social-links">
-            <a href="https://github.com/BrayanMR" class="social-link" target="_blank" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/brayan-mosos-rodriguez-984358345" class="social-link" target="_blank" aria-label="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.threads.com/@brayan_mr07" class="social-link" target="_blank" aria-label="Threads">
-              <i class="fas fa-at"></i>
-            </a>
-            <a href="#" class="social-link" target="_blank" aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
+      </div>
+
+      <!-- Formulario de Contacto Premium (Derecha) -->
+      <div class="contact-form-container reveal reveal-right">
+        <form class="contact-form" (submit)="onSubmitContact($event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" required placeholder="Tu nombre">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="tuemail@ejemplo.com">
+            </div>
           </div>
-        </div>
+          
+          <div class="form-group">
+            <label for="subject">Asunto</label>
+            <input type="text" id="subject" name="subject" required placeholder="Asunto del mensaje">
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Describe tu proyecto o consulta aquí..."></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-submit" [disabled]="isSubmitting()">
+            @if (isSubmitting()) {
+              <i class="fas fa-spinner fa-spin"></i> Enviando...
+            } @else {
+              <i class="fas fa-paper-plane"></i> Enviar Mensaje
+            }
+          </button>
+
+          @if (submitStatus() === 'success') {
+            <div class="form-status success">
+              <i class="fas fa-check-circle"></i> ¡Mensaje enviado con éxito! Te contactaré pronto.
+            </div>
+          }
+          @if (submitStatus() === 'error') {
+            <div class="form-status error">
+              <i class="fas fa-exclamation-circle"></i> Hubo un error al enviar. Por favor escribe directamente a <a href="mailto:bryn9105@gmail.com">bryn9105@gmail.com</a>.
+            </div>
+          }
+        </form>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
+<!-- Footer Moderno -->
 <footer class="footer">
   <div class="footer-container">
-    <div class="footer-content">
+    <div class="footer-top">
       <div class="footer-brand">
-        <h3>Bryan Mosos</h3>
-        <p>Desarrollador Full Stack</p>
+        <h3>Brayan Mosos</h3>
+        <p>Software Developer & Analista</p>
       </div>
-      
-     
-      
-      
+      <div class="footer-social-links">
+        <a href="https://github.com/BrayanMR" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/brayan-mosos-rodriguez-984358345" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.threads.net/@brayan_mr07" target="_blank" aria-label="Threads"><i class="fab fa-threads"></i></a>
+      </div>
     </div>
-    
     <div class="footer-bottom">
-      <p>&copy; 2025 Bryan Mosos. Todos los derechos reservados.</p>
-      <p> DIOS EL CAMINO</p>
+      <p>&copy; 2026 Brayan Mosos. Diseñado con pasión y tecnología de vanguardia.</p>
+      <p class="footer-faith"><i class="fas fa-cross"></i> DIOS EL CAMINO</p>
     </div>
   </div>
 </footer>
