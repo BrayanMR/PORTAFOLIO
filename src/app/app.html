@@ -10,14 +10,15 @@
     </div>
     
     <!-- Botón Hamburguesa -->
-    <button class="hamburger" (click)="toggleMenu()" [class.active]="menuOpen()" aria-label="Abrir menú">
+    <button class="hamburger" (click)="toggleMenu()" [class.active]="menuOpen()"
+      [attr.aria-expanded]="menuOpen()" aria-controls="main-menu" aria-label="Menú de navegación">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
     </button>
     
     <!-- Menú de navegación -->
-    <ul class="nav-menu" [class.active]="menuOpen()">
+    <ul id="main-menu" class="nav-menu" [class.active]="menuOpen()">
       <li><a href="#inicio" class="nav-link" (click)="closeMenu()">Inicio</a></li>
       <li><a href="#sobre-mi" class="nav-link" (click)="closeMenu()">Sobre Mí</a></li>
       <li><a href="#experiencia" class="nav-link" (click)="closeMenu()">Experiencia</a></li>
@@ -27,24 +28,21 @@
   </div>
 </nav>
 
-<!-- Sección Hero con Efecto de Luces de Neón -->
+<!-- Presentación -->
 <section id="inicio" class="hero">
-  <div class="hero-glow-1"></div>
-  <div class="hero-glow-2"></div>
   <div class="hero-container">
     <div class="hero-content">
       <div class="hero-text reveal reveal-left">
-        <div class="badge-2026">PRO PORTFOLIO 2026</div>
-        <h2 class="hero-greeting">¡Hola! Soy</h2>
+        <div class="hero-kicker">Portafolio · Desarrollo de software</div>
         <h1 class="hero-name">Brayan Mosos</h1>
-        <p class="hero-title-dynamic">Desarrollador de Software & Analista</p>
+        <p class="hero-title-dynamic">Desarrollador de software y analista</p>
         <p class="hero-description">
           Tecnólogo en Análisis y Desarrollo de Software con enfoque en automatización, 
           inteligencia artificial aplicada y creación de aplicaciones móviles con Flutter y web con Angular.
         </p>
         <div class="hero-buttons">
-          <a href="#proyectos" class="btn btn-primary"><i class="fas fa-project-diagram"></i> Ver Proyectos</a>
-          <a href="#contacto" class="btn btn-secondary"><i class="fas fa-paper-plane"></i> Hablemos</a>
+          <a href="#proyectos" class="btn btn-primary">Ver proyectos <span aria-hidden="true">↘</span></a>
+          <a href="#contacto" class="btn btn-secondary">Hablemos</a>
         </div>
         <div class="hero-social">
           <a href="https://github.com/BrayanMR" class="social-link" target="_blank" aria-label="GitHub">
@@ -59,10 +57,9 @@
         </div>
       </div>
       <div class="hero-image reveal reveal-right">
-        <div class="image-wrapper">
-          <img src="assets/images/IMAGEN.png" alt="Brayan Mosos - Desarrollador">
-          <div class="image-glow"></div>
-        </div>
+        <figure class="image-wrapper">
+          <img src="assets/images/IMAGEN.png" width="928" height="960" alt="Retrato de Brayan Mosos">
+        </figure>
       </div>
     </div>
   </div>
@@ -201,29 +198,24 @@
     </div>
 
     <div class="timeline">
-      <!-- Experiencia 1: AURA -->
+      <!-- Experiencia 1: Proyectado -->
       <div class="timeline-item reveal reveal-left">
         <div class="timeline-dot"></div>
-        <div class="timeline-date">Febrero 2026 - Julio 2026</div>
+        <div class="timeline-date">Proyecto web</div>
         <div class="timeline-content">
           <div class="timeline-project-badge"><i class="fas fa-star"></i> Proyecto Destacado</div>
-          <h3>Creador & Desarrollador Principal</h3>
-          <h4 class="timeline-company">AURA - Plataforma Tecnológica de Apoyo</h4>
+          <h3>Desarrollo web</h3>
+          <h4 class="timeline-company">Proyectado</h4>
           <p class="timeline-desc">
-            Diseñé y desarrollé la plataforma final Sena orientada al acompañamiento y apoyo digital 
-            para mujeres en situación de vulnerabilidad, garantizando accesibilidad y confidencialidad.
+            Sitio web de una marca colombiana de ropa urbana con mensajes de fe.
           </p>
           <ul class="timeline-tasks">
-            <li><i class="fas fa-check-circle"></i> Desarrollo full-stack de la aplicación web y móvil.</li>
-            <li><i class="fas fa-check-circle"></i> Diseño e implementación de base de datos seguras con Firebase.</li>
-            <li><i class="fas fa-check-circle"></i> Integración de módulos de autenticación y gestión segura de cuentas.</li>
-            <li><i class="fas fa-check-circle"></i> Diseño de interfaces intuitivas y adaptables (Mobile-First).</li>
+            <li><i class="fas fa-check-circle"></i> Catálogo organizado en hoodies, crewnecks y camisetas.</li>
+            <li><i class="fas fa-check-circle"></i> Enlace directo a WhatsApp para consultas y pedidos.</li>
           </ul>
           <div class="timeline-tags">
-            <span class="tag">Angular</span>
-            <span class="tag">Flutter</span>
-            <span class="tag">Firebase</span>
-            <span class="tag">Security</span>
+            <span class="tag">Catálogo web</span>
+            <span class="tag">WhatsApp</span>
           </div>
         </div>
       </div>
@@ -274,10 +266,10 @@
           <div class="project-overlay">
             <div class="project-links">
               <button class="project-link" (click)="openGallery()" aria-label="Ver Galería">
-                <i class="fas fa-images"></i>
+                <i class="fas fa-images"></i> <span>Ver Galería</span>
               </button>
               <a href="https://github.com/BrayanMR/rock" class="project-link" target="_blank" aria-label="Ver Código">
-                <i class="fab fa-github"></i>
+                <i class="fab fa-github"></i> <span>Ver Código</span>
               </a>
             </div>
           </div>
@@ -302,37 +294,29 @@
         </div>
       </div>
       
-      <!-- Proyecto 2: Aura Web App -->
+      <!-- Proyecto 2: Proyectado -->
       <div class="project-card reveal">
         <div class="project-image">
-          <img src="assets/images/aura.png" alt="Aura - Plataforma de Apoyo">
+          <img src="assets/images/FOTOSPROYECTADO.webp" alt="Página de inicio de Proyectado">
           <div class="project-overlay">
             <div class="project-links">
-              <a href="https://aur-six.vercel.app/home" class="project-link" target="_blank" aria-label="Ver Demo">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-              <a href="https://github.com/BrayanMR/Aura" class="project-link" target="_blank" aria-label="Ver Código">
-                <i class="fab fa-github"></i>
+              <a href="https://proyectado-web.vercel.app/" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Visitar Proyectado">
+                <i class="fas fa-external-link-alt"></i> <span>Visitar Proyectado</span>
               </a>
             </div>
           </div>
         </div>
         <div class="project-info">
           <div class="project-category">
-            <i class="fas fa-globe"></i> Web App
+            <i class="fas fa-globe"></i> Sitio web
           </div>
-          <h3 class="project-title">Aura</h3>
+          <h3 class="project-title">Proyectado</h3>
           <p class="project-description">
-            Plataforma web y aplicacion movil orientada al acompañamiento y apoyo digital para mujeres en situación de vulnerabilidad, garantizando accesibilidad y confidencialidad.
+            Catálogo de ropa urbana con mensajes de fe y pedidos directos por WhatsApp.
           </p>
-          <div class="project-credentials">
-            <strong>Credenciales Demo:</strong><br>
-            <span>📧 admin123@gmail.com</span>
-          </div>
           <div class="project-tags">
-            <span class="tag">Angular</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">Firebase</span>
+            <span class="tag">Catálogo web</span>
+            <span class="tag">WhatsApp</span>
           </div>
         </div>
       </div>
@@ -344,10 +328,10 @@
           <div class="project-overlay">
             <div class="project-links">
               <a href="https://ecosystempagina.vercel.app/#/auth" class="project-link" target="_blank" aria-label="Ver Demo">
-                <i class="fas fa-external-link-alt"></i>
+                <i class="fas fa-external-link-alt"></i> <span>Ver Demo</span>
               </a>
               <a href="https://github.com/BrayanMR/Ecosystempagina" class="project-link" target="_blank" aria-label="Ver Código">
-                <i class="fab fa-github"></i>
+                <i class="fab fa-github"></i> <span>Ver Código</span>
               </a>
             </div>
           </div>
@@ -380,10 +364,10 @@
           <div class="project-overlay">
             <div class="project-links">
               <a href="https://rifa-olive.vercel.app" class="project-link" target="_blank" aria-label="Ver Demo">
-                <i class="fas fa-external-link-alt"></i>
+                <i class="fas fa-external-link-alt"></i> <span>Ver Demo</span>
               </a>
               <a href="https://github.com/BrayanMR/rifa-" class="project-link" target="_blank" aria-label="Ver Código">
-                <i class="fab fa-github"></i>
+                <i class="fab fa-github"></i> <span>Ver Código</span>
               </a>
             </div>
           </div>
@@ -412,10 +396,10 @@
           <div class="project-overlay">
             <div class="project-links">
               <a href="https://ajedrez-pi.vercel.app/inicio" class="project-link" target="_blank" aria-label="Ver Demo">
-                <i class="fas fa-external-link-alt"></i>
+                <i class="fas fa-external-link-alt"></i> <span>Ver Demo</span>
               </a>
               <a href="https://github.com/BrayanMR/ajedrez" class="project-link" target="_blank" aria-label="Ver Código">
-                <i class="fab fa-github"></i>
+                <i class="fab fa-github"></i> <span>Ver Código</span>
               </a>
             </div>
           </div>
