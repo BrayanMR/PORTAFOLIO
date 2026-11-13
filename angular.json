@@ -25,7 +25,10 @@
               "src/styles.css"
             ],
             "outputPath": "dist/portafolio",
-            "index": "src/index.html"
+            "index": "src/index.html",
+            "optimization": {
+              "fonts": false
+            }
           },
           "configurations": {
             "production": {
